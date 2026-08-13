@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sora: 'Sora', sans-serif;
+    --font-hanken: 'Hanken Grotesk', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    
+    --color-neutral-bg: #0F1115;
+    --color-surface: #181B20;
+    --color-surface-hover: #21252D;
+    --color-border: #2B303B;
+    
+    --color-primary: #22FF88;
+    --color-secondary: #00F0FF;
+    --color-tertiary: #FF00E5;
+  }
+
+  body {
+    font-family: var(--font-hanken);
+    background-color: #0F1115;
+    color: #E0E4EC;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sora);
+  }
+
+  code, kbd, samp, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+.font-sora {
+  font-family: 'Sora', sans-serif;
+}
+
+.font-hanken {
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0F1115;
+}
+::-webkit-scrollbar-thumb {
+  background: #2B303B;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #22FF88;
+}
+
+/* Pitch Diagonal Grass Stripes for Lobby */
+.bg-pitch-stripes {
+  background-color: #55704d;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #5c7a53,
+    #5c7a53 35px,
+    #4e6846 35px,
+    #4e6846 70px
+  );
+}

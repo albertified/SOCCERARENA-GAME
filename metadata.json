@@ -1,0 +1,6 @@
+{
+  "name": "Soccer Arena",
+  "description": "Online real-time 2D multiplayer soccer physics arena with custom stadium rules and Socket.io synchronization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
