@@ -8,7 +8,7 @@ export const PHYSICS_CONFIG = {
   
   ballDamping: 0.985,
   ballMass: 0.5,
-  ballBounciness: 0.72,
+  ballBounciness: 0.5, // Controlled, realistic bounciness
   
   kickMargin: 6, // Distance allowance for kicking
   kickForce: 7.5, // Default base impulse force
@@ -200,15 +200,17 @@ export class PhysicsEngine {
     const redG = this.stadium.redGoal;
     const blueG = this.stadium.blueGoal;
 
+    const bounceMult = disc === this.ball ? disc.bounciness * 0.5 : disc.bounciness * 0.6;
+
     // Top wall clamp
     if (disc.y < p.top + rad) {
       disc.y = p.top + rad;
-      if (disc.vy < 0) disc.vy *= -disc.bounciness;
+      if (disc.vy < 0) disc.vy *= -bounceMult;
     }
     // Bottom wall clamp
     if (disc.y > p.bottom - rad) {
       disc.y = p.bottom - rad;
-      if (disc.vy > 0) disc.vy *= -disc.bounciness;
+      if (disc.vy > 0) disc.vy *= -bounceMult;
     }
 
     // Left wall / Red Goal Area clamp
@@ -217,12 +219,12 @@ export class PhysicsEngine {
       const minX = p.left - this.stadium.goalDepth + rad;
       if (disc.x < minX) {
         disc.x = minX;
-        if (disc.vx < 0) disc.vx *= -disc.bounciness;
+        if (disc.vx < 0) disc.vx *= -bounceMult;
       }
     } else {
       if (disc.x < p.left + rad) {
         disc.x = p.left + rad;
-        if (disc.vx < 0) disc.vx *= -disc.bounciness;
+        if (disc.vx < 0) disc.vx *= -bounceMult;
       }
     }
 
@@ -232,12 +234,12 @@ export class PhysicsEngine {
       const maxX = p.right + this.stadium.goalDepth - rad;
       if (disc.x > maxX) {
         disc.x = maxX;
-        if (disc.vx > 0) disc.vx *= -disc.bounciness;
+        if (disc.vx > 0) disc.vx *= -bounceMult;
       }
     } else {
       if (disc.x > p.right - rad) {
         disc.x = p.right - rad;
-        if (disc.vx > 0) disc.vx *= -disc.bounciness;
+        if (disc.vx > 0) disc.vx *= -bounceMult;
       }
     }
   }
@@ -510,7 +512,7 @@ export class PhysicsEngine {
 
       const dot = disc.vx * nx + disc.vy * ny;
       if (dot < 0) {
-        const restitution = Math.min(disc.bounciness, seg.bounciness);
+        const restitution = disc.bounciness * seg.bounciness;
         disc.vx -= (1 + restitution) * dot * nx;
         disc.vy -= (1 + restitution) * dot * ny;
         if (disc === this.ball) {

@@ -43,17 +43,17 @@ export const CLASSIC_STADIUM: Stadium = {
   ],
   segments: [
     // Top border wall
-    { p0: { x: 200, y: 100 }, p1: { x: 1300, y: 100 }, bounciness: 0.9, color: '#C7D2FE' },
+    { p0: { x: 200, y: 100 }, p1: { x: 1300, y: 100 }, bounciness: 0.5, color: '#C7D2FE' },
     // Bottom border wall
-    { p0: { x: 200, y: 720 }, p1: { x: 1300, y: 720 }, bounciness: 0.9, color: '#C7D2FE' },
+    { p0: { x: 200, y: 720 }, p1: { x: 1300, y: 720 }, bounciness: 0.5, color: '#C7D2FE' },
     // Left wall top segment (above goal)
-    { p0: { x: 200, y: 100 }, p1: { x: 200, y: 310 }, bounciness: 0.9, color: '#C7D2FE' },
+    { p0: { x: 200, y: 100 }, p1: { x: 200, y: 310 }, bounciness: 0.5, color: '#C7D2FE' },
     // Left wall bottom segment (below goal)
-    { p0: { x: 200, y: 510 }, p1: { x: 200, y: 720 }, bounciness: 0.9, color: '#C7D2FE' },
+    { p0: { x: 200, y: 510 }, p1: { x: 200, y: 720 }, bounciness: 0.5, color: '#C7D2FE' },
     // Right wall top segment (above goal)
-    { p0: { x: 1300, y: 100 }, p1: { x: 1300, y: 310 }, bounciness: 0.9, color: '#C7D2FE' },
+    { p0: { x: 1300, y: 100 }, p1: { x: 1300, y: 310 }, bounciness: 0.5, color: '#C7D2FE' },
     // Right wall bottom segment (below goal)
-    { p0: { x: 1300, y: 510 }, p1: { x: 1300, y: 720 }, bounciness: 0.9, color: '#C7D2FE' },
+    { p0: { x: 1300, y: 510 }, p1: { x: 1300, y: 720 }, bounciness: 0.5, color: '#C7D2FE' },
 
     // Left Goal Net Back Wall
     { p0: { x: 110, y: 310 }, p1: { x: 110, y: 510 }, bounciness: 0.5, color: '#EF4444' },
@@ -107,12 +107,12 @@ export const SMALL_STADIUM: Stadium = {
     { x: 1120, y: 425, radius: 7, bounciness: 0.8, color: '#CCCCCC' },
   ],
   segments: [
-    { p0: { x: 160, y: 80 }, p1: { x: 1040, y: 80 }, bounciness: 0.9, color: '#C7D2FE' },
-    { p0: { x: 160, y: 600 }, p1: { x: 1040, y: 600 }, bounciness: 0.9, color: '#C7D2FE' },
-    { p0: { x: 160, y: 80 }, p1: { x: 160, y: 255 }, bounciness: 0.9, color: '#C7D2FE' },
-    { p0: { x: 160, y: 425 }, p1: { x: 160, y: 600 }, bounciness: 0.9, color: '#C7D2FE' },
-    { p0: { x: 1040, y: 80 }, p1: { x: 1040, y: 255 }, bounciness: 0.9, color: '#C7D2FE' },
-    { p0: { x: 1040, y: 425 }, p1: { x: 1040, y: 600 }, bounciness: 0.9, color: '#C7D2FE' },
+    { p0: { x: 160, y: 80 }, p1: { x: 1040, y: 80 }, bounciness: 0.5, color: '#C7D2FE' },
+    { p0: { x: 160, y: 600 }, p1: { x: 1040, y: 600 }, bounciness: 0.5, color: '#C7D2FE' },
+    { p0: { x: 160, y: 80 }, p1: { x: 160, y: 255 }, bounciness: 0.5, color: '#C7D2FE' },
+    { p0: { x: 160, y: 425 }, p1: { x: 160, y: 600 }, bounciness: 0.5, color: '#C7D2FE' },
+    { p0: { x: 1040, y: 80 }, p1: { x: 1040, y: 255 }, bounciness: 0.5, color: '#C7D2FE' },
+    { p0: { x: 1040, y: 425 }, p1: { x: 1040, y: 600 }, bounciness: 0.5, color: '#C7D2FE' },
     { p0: { x: 80, y: 255 }, p1: { x: 80, y: 425 }, bounciness: 0.5, color: '#EF4444' },
     { p0: { x: 80, y: 255 }, p1: { x: 160, y: 255 }, bounciness: 0.5, color: '#EF4444' },
     { p0: { x: 80, y: 425 }, p1: { x: 160, y: 425 }, bounciness: 0.5, color: '#EF4444' },
@@ -162,12 +162,12 @@ export const BIG_STADIUM: Stadium = {
     { x: 1680, y: 615, radius: 9, bounciness: 0.8, color: '#CCCCCC' },
   ],
   segments: [
-    { p0: { x: 220, y: 120 }, p1: { x: 1580, y: 120 }, bounciness: 0.9, color: '#C7D2FE' },
-    { p0: { x: 220, y: 860 }, p1: { x: 1580, y: 860 }, bounciness: 0.9, color: '#C7D2FE' },
-    { p0: { x: 220, y: 120 }, p1: { x: 220, y: 365 }, bounciness: 0.9, color: '#C7D2FE' },
-    { p0: { x: 220, y: 615 }, p1: { x: 220, y: 860 }, bounciness: 0.9, color: '#C7D2FE' },
-    { p0: { x: 1580, y: 120 }, p1: { x: 1580, y: 365 }, bounciness: 0.9, color: '#C7D2FE' },
-    { p0: { x: 1580, y: 615 }, p1: { x: 1580, y: 860 }, bounciness: 0.9, color: '#C7D2FE' },
+    { p0: { x: 220, y: 120 }, p1: { x: 1580, y: 120 }, bounciness: 0.5, color: '#C7D2FE' },
+    { p0: { x: 220, y: 860 }, p1: { x: 1580, y: 860 }, bounciness: 0.5, color: '#C7D2FE' },
+    { p0: { x: 220, y: 120 }, p1: { x: 220, y: 365 }, bounciness: 0.5, color: '#C7D2FE' },
+    { p0: { x: 220, y: 615 }, p1: { x: 220, y: 860 }, bounciness: 0.5, color: '#C7D2FE' },
+    { p0: { x: 1580, y: 120 }, p1: { x: 1580, y: 365 }, bounciness: 0.5, color: '#C7D2FE' },
+    { p0: { x: 1580, y: 615 }, p1: { x: 1580, y: 860 }, bounciness: 0.5, color: '#C7D2FE' },
     { p0: { x: 120, y: 365 }, p1: { x: 120, y: 615 }, bounciness: 0.5, color: '#EF4444' },
     { p0: { x: 120, y: 365 }, p1: { x: 220, y: 365 }, bounciness: 0.5, color: '#EF4444' },
     { p0: { x: 120, y: 615 }, p1: { x: 220, y: 615 }, bounciness: 0.5, color: '#EF4444' },
