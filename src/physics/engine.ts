@@ -1,20 +1,20 @@
 import { Disc, PlayerDisc, PlayerInput, Stadium, Vector2D } from '../types/haxball';
 
 export const PHYSICS_CONFIG = {
-  playerAcceleration: 0.55,
-  playerDamping: 0.88, // Moderate, well-controlled movement
+  playerAcceleration: 0.42,
+  playerDamping: 0.86, // Slightly heavier damping for more controlled movement
   playerMass: 1.0,
-  playerBounciness: 0.4,
+  playerBounciness: 0.28,
   
   ballDamping: 0.985,
   ballMass: 0.5,
-  ballBounciness: 0.5, // Controlled, realistic bounciness
+  ballBounciness: 0.28, // Low bounciness keeps the ball glued while dribbling
   
   kickMargin: 6, // Distance allowance for kicking
   kickForce: 7.5, // Default base impulse force
   
-  maxPlayerSpeed: 4.0, // Natural tactical running speed
-  pushingMaxPlayerSpeed: 2.7, // Speed when pushing/dribbling ball
+  maxPlayerSpeed: 3.2, // Slower, more tactical running speed
+  pushingMaxPlayerSpeed: 2.0, // Slower dribbling speed for tight ball control
   maxBallSpeed: 22.0, // Top speed allowance for passes and shots
 };
 
